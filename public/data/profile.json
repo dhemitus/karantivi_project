@@ -1,0 +1,62 @@
+[
+  {
+    "width": "40%",
+    "title": "Fraud",
+    "url": "profile-fraud",
+    "urlImage": "https://storage.googleapis.com/cdn_sl_karantivi/2020/08/karantivi-fraud-profile-cover.jpg"
+  },
+  {
+    "width": "28%",
+    "title": "My Mother is Hero",
+    "url": "profile-my-mother-is-hero",
+    "urlImage": "https://storage.googleapis.com/cdn_sl_karantivi/2020/08/karantivi-my-mother-is-hero-profile-cover.jpg"
+  }, 
+  {
+    "width": "32%",
+    "title": "Tikam",
+    "url": "profile-tikam",
+    "urlImage": "https://storage.googleapis.com/cdn_sl_karantivi/2020/08/karantivi-tikam-profile-cover.jpg"
+  }, 
+  {
+    "width": "25%",
+    "title": "Plester X",
+    "url": "profile-plester-x",
+    "urlImage": "https://storage.googleapis.com/cdn_sl_karantivi/2020/08/karantivi-plester-x-profile-cover.jpg"
+  }, 
+  {
+    "width": "25%",
+    "title": "Blingsatan",
+    "url": "profile-blingsatan",
+    "urlImage": "https://storage.googleapis.com/cdn_sl_karantivi/2020/08/karantivi-blingsatan-profile-cover-scaled-1.jpg"
+  }, 
+  {
+    "width": "25%",
+    "title": "Dandelions",
+    "url": "profile-dandelions",
+    "urlImage": "https://storage.googleapis.com/cdn_sl_karantivi/2020/08/karantivi-dandelions-profile-cover.jpeg"
+  }, 
+  {
+    "width": "25%",
+    "title": "Rio Sidik",
+    "url": "profile-rio-sidik",
+    "urlImage": "https://storage.googleapis.com/cdn_sl_karantivi/2020/08/karantivi-rio-sidik-profile-cover-470x470.jpg"
+  }, 
+  {
+    "width": "35%",
+    "title": "Silampukau",
+    "url": "profile-silampukau",
+    "urlImage": "https://storage.googleapis.com/cdn_sl_karantivi/2020/08/karantivi-silampukau-profile-cover-scaled-1.jpg"
+  }, 
+  {
+    "width": "35%",
+    "title": "Heavy Monster",
+    "url": "profile-heavy-monster",
+    "urlImage": "https://storage.googleapis.com/cdn_sl_karantivi/2020/08/karantivi-heavy-monster-profil-0-470x470.jpg"
+  }, 
+  {
+    "width": "30%",
+    "title": "Freedom Clan",
+    "url": "profile-freedom-clan",
+    "urlImage": "https://storage.googleapis.com/cdn_sl_karantivi/2020/08/karantivi-freedom-clan-profile.jpg"
+  }
+]

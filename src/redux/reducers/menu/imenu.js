@@ -1,0 +1,4 @@
+export const EMPTY_MENU = 'EMPTY MENU LOADED'
+export const SOCMED_MENU = 'SOCMED MENU LOADED'
+export const MAIN_MENU = 'MAIN MENU LOADED'
+export const FOOTER_MENU = 'FOOTER MENU LOADED'
