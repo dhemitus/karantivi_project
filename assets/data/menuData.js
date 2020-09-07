@@ -15,7 +15,7 @@ export const soclink = [
 export const mainlink = [
   {name: 'Beranda', icon: faHome, url: 'gigs'},
   {name: 'Gigs', icon: faMusic, url: 'gigs'},
-  {name: 'Podcast', icon: faPodcast, url: 'podcast'},
+  {name: 'Talk Show', icon: faPodcast, url: 'podcast'},
   {name: 'Jadwal', icon: faCalendar, url: 'schedule'},
   {name: 'Profil', icon: faUsers, url: 'profile'},
   {name: 'Galeri', icon: faImages, url: 'gallery'}

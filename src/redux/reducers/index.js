@@ -10,6 +10,7 @@ import frontpodcastReducer from './podcast/frontpodcastreducer'
 import detailpodcastReducer from './podcast/detailpodcastreducer'
 import frontgalleryReducer from './gallery/frontgalleryreducer'
 import frontprofileReducer from './profile/frontprofilereducer'
+import insideliveReducer from './live/insidelivereducer'
 
 const rootReducer = combineReducers({
   socMenu: socmenuReducer,
@@ -22,6 +23,7 @@ const rootReducer = combineReducers({
   frontGallery: frontgalleryReducer,
   frontProfile: frontprofileReducer,
   detailPodcast: detailpodcastReducer,
+  insideLive: insideliveReducer
 })
 
 export default rootReducer

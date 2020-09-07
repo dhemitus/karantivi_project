@@ -8,12 +8,17 @@ import PodcastSlider from '../../src/components/view/home/PodcastSlider'
 import Header from '../../src/components/view/header/SubHeader'
 import ShortDesc from '../../src/components/view/common/ShortDesc'
 import { ActionCreators as action } from '../../src/redux/actions'
+import Iframe from 'react-iframe'
 
 const useStyles = makeStyles((theme) =>
   createStyles({
     root: {},
     video:{
       marginTop: theme.spacing(1)
+    },
+    iframe: {
+      marginTop: theme.spacing(1),
+      border:'none'
     }
   })
 )
@@ -31,14 +36,17 @@ const DetailPoscastPage = (props) => {
   return(
     <Layout className={classes.root} title="KaranTiVi Panggung Virtual &bull; KaranTiVi">
       <Header />
-      {data !== {} && 
-        <Player
-          cover="https://karantivi.straight-line.org/wp-content/uploads/sites/18/2020/08/karantivi-kolektif-sinema-cover-2000p-scaled-2.jpg"
-          src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
-        >
-          <BigPlayButton position="center" />
-        </Player>
-      }
+      <Iframe url={data.urlVideo}
+        allowfullscreen
+        frameborder='0'
+        styles={{borderWidth: '0', height: "720px"}}
+        className={`${classes.iframe} sproutvideo-player`}
+        width="100%"
+        height="720px"
+        id="myId"
+        display="initial"
+        position="relative"
+      />
       <ShortDesc />
       {/*<div id="podcast">
         <PodcastSlider />

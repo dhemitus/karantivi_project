@@ -14,6 +14,8 @@ const useStyles = makeStyles((theme) =>
       flexWrap: 'wrap',
     },
     imageWrapper: {
+      marginLeft: '2px',
+      marginRight: '2px',
       position: 'relative',
       display: 'block',
       padding: 0,

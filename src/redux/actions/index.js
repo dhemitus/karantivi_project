@@ -5,6 +5,7 @@ import * as ScheduleAction from './schedule/action'
 import * as PodcastAction from './podcast/action'
 import * as GalleryAction from './gallery/action'
 import * as ProfileAction from './profile/action'
+import * as LiveAction from './live/action'
 
 export const ActionCreators = Object.assign({},
   MenuAction,
@@ -13,5 +14,6 @@ export const ActionCreators = Object.assign({},
   ScheduleAction,
   PodcastAction,
   GalleryAction,
-  ProfileAction
+  ProfileAction,
+  LiveAction
 )

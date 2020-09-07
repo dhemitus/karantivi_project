@@ -5,7 +5,7 @@ const initialState = {
     list: []
   }
   
-  export default function footerdescReducer (
+  export default function frontgalleryReducer (
     state = initialState,
     action
   ) {

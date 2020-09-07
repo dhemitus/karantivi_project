@@ -75,7 +75,7 @@ const PodcastSlider = (props) => {
   return (
     <Container className={classes.root} component="section">
       <Typography className={classes.title} variant="h4" marked="center" align="center" component="h2">
-        Podcast
+        Talk Show
       </Typography>
       <div className={`${classes.slideSpace} ${className} App`}>
         <Slider 
