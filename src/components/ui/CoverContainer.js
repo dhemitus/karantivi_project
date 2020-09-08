@@ -49,15 +49,20 @@ const useStyles = makeStyles((theme) =>
 )
 
 const CoverContainer = (props) => {
-  const { children, className, backgroundClassName } = props
+  const { children, className, backgroundClassName, backgroundImage } = props
   const classes = useStyles(props)
-  console.log(backgroundClassName)
+
   return (
     <section className={`${classes.root} ${className}`}>
       <Container className={`${classes.container} ${className}`}>
         { children }
         <div className={`${classes.backdrop} ${className}`} />
-        <div className={`${classes.background} ${backgroundClassName}`} />
+        <div 
+        style={{
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundPosition: 'center',
+        }}
+        className={`${classes.background} ${backgroundClassName}`} />
       </Container>
     </section>
   )
