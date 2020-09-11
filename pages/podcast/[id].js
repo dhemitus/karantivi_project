@@ -36,17 +36,24 @@ const DetailPoscastPage = (props) => {
   return(
     <Layout className={classes.root} title="KaranTiVi Panggung Virtual &bull; KaranTiVi">
       <Header />
-      <Iframe url={data.urlVideo}
-        allowfullscreen
-        frameborder='0'
-        styles={{borderWidth: '0', height: "720px"}}
-        className={`${classes.iframe} sproutvideo-player`}
-        width="100%"
-        height="720px"
-        id="myId"
-        display="initial"
-        position="relative"
-      />
+      <div style={{position:'relative', height:'0', paddingBottom:'56.25%'}}>
+        {data !== {} && data !== undefined &&
+        <Iframe url={data.urlVideo}
+          allowfullscreen
+          frameborder='0'
+          styles={{
+            position:'absolute',
+            width:'100%',
+            borderWidth: '0', height: "100%"
+          }}
+          className={`${classes.iframe} sproutvideo-player`}
+          width="100%"
+          height="720px"
+          id="myId"
+          display="initial"
+          position="relative"
+        />}
+      </div>
       <ShortDesc />
       {/*<div id="podcast">
         <PodcastSlider />

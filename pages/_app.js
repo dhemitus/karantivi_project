@@ -7,17 +7,17 @@ import { Provider } from 'react-redux'
 import "node_modules/video-react/dist/video-react.css"
 import theme from '../styles/themes/theme'
 import store from '../src/redux/store/index'
-
+//import Firebase, { FirebaseContext } from '../src/api/firebase'
 //import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
 
   return (
     <Provider store={store}>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Component {...pageProps} />
-      </ThemeProvider>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Component {...pageProps} />
+        </ThemeProvider>
     </Provider>
   )
 }

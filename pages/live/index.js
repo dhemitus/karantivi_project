@@ -1,11 +1,12 @@
-import { useEffect, } from 'react'
+import { useState, useEffect, } from 'react'
 import { createStyles, makeStyles } from "@material-ui/core/styles"
-import { Player, BigPlayButton } from 'video-react';
-import Iframe from 'react-iframe'
 import { useSelector, useDispatch } from 'react-redux'
+import { Typography } from "@material-ui/core"
 
 import Layout from '../../src/components/Layout'
-import HLSSource from '../../src/components/ui/HLSSource'
+import LivePlayer from '../../src/components/view/live/LivePlayer'
+import LoginCover from '../../src/components/view/header/LoginCover'
+import PaymentCover from '../../src/components/view/header/PaymentCover'
 import Header from '../../src/components/view/header/SubHeader'
 import { ActionCreators as action } from '../../src/redux/actions'
 
@@ -21,38 +22,48 @@ const useStyles = makeStyles((theme) =>
 
 const LivePage = (props) => {
   const classes = useStyles(props)
-  const { data } = useSelector((state) => state.insideLive)
+//  const { data } = useSelector((state) => state.authUser)
   const dispatch = useDispatch()
+  const [logged, setLogged] = useState(false)
+  const [paid, setPaid] = useState(false)
 
   useEffect(() => {
-    dispatch(action.loadLiveData())
+/*    (async () =>{
+      console.log(window.sessionStorage.getItem(`firebase:authUser:${process.env.NEXT_PUBLIC_ENV_API_KEY}:[DEFAULT]`))
+      //      await dispatch(action.checkUser())
+    })()*/
+    _setLog()
   }, [])
+
+  const _setLog = () => {
+    let user = JSON.parse(window.sessionStorage.getItem(`firebase:authUser:${process.env.NEXT_PUBLIC_ENV_API_KEY}:[DEFAULT]`))
+
+    if(user.uid === null) {
+      setLogged(false)
+    } else {
+      setLogged(true)
+    }
+  }
+
+  const _checkStatus = () => {
+    if(logged && paid) {
+      return <LivePlayer />
+    } else if(logged && !paid){
+      return  <PaymentCover />
+    } else {
+      return  <LoginCover onClick={() => _onLogin()} />
+    }
+  }
+
+  const _onLogin = async () => {
+    await dispatch(action.loginFromGoogle())
+    _setLog()
+  }
 
   return(
     <Layout className={classes.root} title="KaranTiVi Panggung Virtual &bull; KaranTiVi">
       <Header />
-      <div>
-        {/*<Player>
-          <HLSSource
-            isVideoChild
-            src="https://test-streams.mux.dev/test_001/stream.m3u8"
-          />
-          <BigPlayButton position="center" />
-        </Player>*/}
-        {data !== {} &&
-          <Iframe url={data.urlVideo}
-            allowfullscreen
-            frameborder='0'
-            styles={{borderWidth: '0', height: "720px"}}
-            className={`sproutvideo-player ${classes.iframe}`}
-            width="100%"
-            height="720px"
-            id="myId"
-            display="initial"
-            position="relative"
-          />
-        }
-      </div>
+      { _checkStatus() }
     </Layout>
   )
 }

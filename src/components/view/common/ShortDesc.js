@@ -30,7 +30,7 @@ const ShortDesc = (props) => {
 
   return (
     <>
-    {data !== {} &&
+    {data !== {} && data !== undefined &&
       <div className={`${classes.descSpace} ${className}`}>
         <Typography variant="subtitle1" className={`${classes.textDesc} ${className}`}>
           {data.title}

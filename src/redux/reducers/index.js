@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-
+//import { reducer as firebase } from 'react-redux-firebase'
 import mainmenuReducer from './menu/mainmenureducer'
 import socmenuReducer from './menu/socmenureducer'
 import footermenuReducer from './menu/footermenureducer'
@@ -11,8 +11,10 @@ import detailpodcastReducer from './podcast/detailpodcastreducer'
 import frontgalleryReducer from './gallery/frontgalleryreducer'
 import frontprofileReducer from './profile/frontprofilereducer'
 import insideliveReducer from './live/insidelivereducer'
+import authuserReducer from './auth/authuserreducer'
 
 const rootReducer = combineReducers({
+//  firebase,
   socMenu: socmenuReducer,
   mainMenu: mainmenuReducer,
   footerMenu: footermenuReducer,
@@ -23,7 +25,8 @@ const rootReducer = combineReducers({
   frontGallery: frontgalleryReducer,
   frontProfile: frontprofileReducer,
   detailPodcast: detailpodcastReducer,
-  insideLive: insideliveReducer
+  insideLive: insideliveReducer,
+  authUser: authuserReducer
 })
 
 export default rootReducer

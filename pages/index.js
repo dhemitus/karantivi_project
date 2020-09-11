@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme) =>
 
 const IndexPage = (props) => {
   const classes = useStyles(props)
+  console.log(process.env)
 
   return(
     <Layout className={classes.root} title="KaranTiVi Panggung Virtual &bull; KaranTiVi">
