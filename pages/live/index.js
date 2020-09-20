@@ -38,7 +38,7 @@ const LivePage = (props) => {
   const _setLog = () => {
     let user = JSON.parse(window.sessionStorage.getItem(`firebase:authUser:${process.env.NEXT_PUBLIC_ENV_API_KEY}:[DEFAULT]`))
 
-    if(user.uid === null) {
+    if(user !== null && user.uid !== null && user.uid === null) {
       setLogged(false)
     } else {
       setLogged(true)

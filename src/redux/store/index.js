@@ -1,16 +1,17 @@
 import reducer from '../reducers/'
 import firebase from 'firebase/app'
-import 'firebase/firestore'
+//import 'firebase/firestore'
 import 'firebase/auth'
+import 'firebase/database'
 import { createStore, applyMiddleware, compose } from 'redux'
-//import thunkMiddleware from 'redux-thunk'
+import thunkMiddleware from 'redux-thunk'
 import thunk from 'redux-thunk'
-import { reduxFirestore, getFirestore } from 'redux-firestore'
-import { reactReduxFirebase, getFirebase } from 'react-redux-firebase'
+//import { reduxFirestore, getFirestore } from 'redux-firestore'
+//import { reactReduxFirebase, getFirebase } from 'react-redux-firebase'
 
-/*const middlewares = [
+const middlewares = [
   thunkMiddleware,
-]*/
+]
 const fbConfig = {
   apiKey: process.env.NEXT_PUBLIC_ENV_API_KEY,
   authDomain: process.env.NEXT_PUBLIC_ENV_AUTH_DOMAIN,
@@ -23,10 +24,12 @@ const fbConfig = {
 }
 firebase.initializeApp(fbConfig)
 
+//export const database = firebase.database()
+
 const configStore = (initialState) => {
 	const enhancer = compose(
-//		applyMiddleware(...middlewares),
-    applyMiddleware(thunk.withExtraArgument({getFirebase, getFirestore})),
+		applyMiddleware(...middlewares),
+//    applyMiddleware(thunk.withExtraArgument({getFirebase, getFirestore})),
 //    reactReduxFirebase(fbConfig),
 //    reduxFirestore(fbConfig)
 	)

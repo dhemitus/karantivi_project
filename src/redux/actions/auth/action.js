@@ -1,5 +1,5 @@
 import { UNLOGGED_USER, LOGGED_USER } from '../../reducers/auth/iauth'
-import * as firebase from 'firebase'
+import firebase from 'firebase/app'
 
 export const loginFromGoogle = () => async dispatch => {
   const provider = new firebase.auth.GoogleAuthProvider();
