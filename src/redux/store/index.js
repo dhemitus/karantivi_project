@@ -1,6 +1,6 @@
 import reducer from '../reducers/'
 import firebase from 'firebase/app'
-//import 'firebase/firestore'
+import 'firebase/firestore'
 import 'firebase/auth'
 import 'firebase/database'
 import { createStore, applyMiddleware, compose } from 'redux'
